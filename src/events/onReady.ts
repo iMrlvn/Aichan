@@ -1,5 +1,4 @@
 import { createEvent } from "seyfert";
-import { ActivityType } from "seyfert/lib/types";
 
 export default createEvent({
     data: { once: true, name: "botReady" },
