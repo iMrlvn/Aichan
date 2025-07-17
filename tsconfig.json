@@ -2,26 +2,15 @@
     "compilerOptions": {
         "module": "CommonJS",
         "target": "ESNext",
-        // "moduleResolution": "node",
+        "moduleResolution": "node",
         "strict": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        // "preserveConstEnums": true,
-        // "noImplicitAny": true,
-        // "strictNullChecks": true,
-        // "strictFunctionTypes": true,
-        // "noImplicitThis": true,
-        // "noUnusedLocals": true,
-        // "noUnusedParameters": true,
-        // "noImplicitReturns": true,
         "skipLibCheck": true,
-        //"noErrorTruncation": true,
         "outDir": "./dist",
-        "rootDir": "./src",
-        // "baseUrl": ".",
-        // "stripInternal": true
+        "rootDir": "./src"
     },
     "exclude": ["node_modules"],
     "include": ["src/**/*"]
