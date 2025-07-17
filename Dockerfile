@@ -3,6 +3,7 @@ RUN mkdir -p /aichan
 WORKDIR /aichan
 ENV NODE_PATH=/usr/local/lib/node_modules
 COPY package.json /aichan
+COPY tsconfig.json /aichan
 RUN npm install
 RUN tsc
 COPY . /aichan
