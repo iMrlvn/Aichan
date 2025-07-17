@@ -1,11 +1,15 @@
-import { Client } from "seyfert";
+import { UsingClient, Client } from "seyfert";
 import { ActivityType, PresenceUpdateStatus } from 'seyfert/lib/types';
+
+declare module 'seyfert' {
+    interface UsingClient extends ParseClient<Client<true>> {}
+}
 
 const client = new Client({
     commands: {
-        prefix: (message) => [message.client.user.toString(), message.client.user.username, "ai"],
-        reply: (ctx) => true,
-        deferReplyResponse: (ctx) => ({ content: 'Sending request...' })
+        prefix: (message) => ["aichan", "ai"],
+        reply: (ctx: any) => true,
+        deferReplyResponse: (ctx: any) => ({ content: 'Sending request...' })
     },
     gateway: {
         properties: {
@@ -14,7 +18,7 @@ const client = new Client({
             device: 'android'
         }
     },
-    presence: (shardId) => ({
+    presence: (shardId: any) => ({
         status: PresenceUpdateStatus.Online,
         activities: [{
             name: "Aichan is here! (uwu)",
