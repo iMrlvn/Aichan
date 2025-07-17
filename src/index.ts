@@ -27,7 +27,8 @@ const client = new Client({
     presence: (shardId) => ({
         status: PresenceUpdateStatus.Online,
         activities: [{
-            name: "Aichan is here! (uwu)",
+            name: "Custom Status",
+            state: "Aichan is here! (uwu)",
             type: ActivityType.Custom,
         }],
         since: Date.now(),
