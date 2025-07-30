@@ -1,22 +1,23 @@
 {
     "name": "aichan",
     "version": "1.0.0",
-    "description": "Your cute discord bot",
-    "main": "dist/index.js",
+    "description": "Your perfect template TypeScript Discord Bot built with Bun & Seyfert",
+    "main": "src/index.ts",
     "engines": {
-        "node": ">=24.x"
+        "bun": "1.x"
     },
     "scripts": {
-        "start": "node dist/index.js",
+        "start": "bun src/index.ts",
         "build": "tsc",
         "watch": "tsc -w"
     },
     "dependencies": {
-        "dotenv": "16.6.1",
-        "seyfert": "3.2.4"
+        "bun-types": "^1.2.19",
+        "dotenv": "^16.6.1",
+        "seyfert": "^3.2.5-dev-16579482848.0"
     },
     "devDependencies": {
-        "@types/node": "24.0.14",
-        "typescript": "5.8.3"
+        "@types/bun": "^1.2.19",
+        "typescript": "^5.8.3"
     }
 }
