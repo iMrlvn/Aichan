@@ -7,7 +7,7 @@
         "bun": "1.x"
     },
     "scripts": {
-        "start": "bun src/index.ts",
+        "start": "bun run src/index.ts",
         "build": "tsc",
         "watch": "tsc -w"
     },
